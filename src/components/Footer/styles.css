@@ -1,0 +1,12 @@
+.footer-container {
+  background-color: var(--purple-400);
+  height: 7.5rem;
+  padding: 2rem;
+}
+
+.footer-container p {
+  text-align: center;
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 1.4;
+}

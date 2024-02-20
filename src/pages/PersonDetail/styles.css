@@ -1,0 +1,43 @@
+.person-detail-container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 65rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.person-detail-container h1 {
+  color: var(--white);
+  margin-bottom: 2.5rem;
+}
+
+.person-detail-container img {
+  max-width: 22rem;
+}
+
+.person-description {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 2rem;
+  color: var(--white);
+}
+
+.person-details-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  gap: 1rem;
+  color: var(--white);
+}
+
+.person-details-list strong {
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.person-details-list li {
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}

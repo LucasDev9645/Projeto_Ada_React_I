@@ -1,0 +1,38 @@
+.header-container {
+  background-color: var(--purple-400);
+  color: var(--white);
+  padding: 0 7.5rem;
+  height: 7.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+}
+
+.header-title h1 {
+  margin-left: 0.5rem;
+}
+
+.header-title span {
+  color: var(--purple-250);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.nav-list a {
+  margin-left: 2rem;
+  text-transform: uppercase;
+}
+
+.nav-list a:hover {
+  color: var(--purple-250);
+}

@@ -1,0 +1,39 @@
+.search-bar {
+  height: 3.75rem;
+  display: flex;
+  margin: 2rem;
+}
+
+.search-bar button,
+.search-bar input {
+  border: 1px solid transparent;
+}
+
+.search-bar input {
+  width: 100%;
+  border-left: none;
+  border-right: none;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar button {
+  width: 3.75rem;
+  font-size: 1.5rem;
+}
+
+.search-bar button:hover {
+  background-color: var(--purple-250);
+}
+
+.search-bar button[type="submit"] {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.search-bar button[type="reset"] {
+  border-radius: 0 0.5rem 0.5rem 0;
+}

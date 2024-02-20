@@ -1,0 +1,22 @@
+.card-container {
+  background-color: var(--purple-300);
+  width: 18.75rem;
+  height: 35rem;
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--white);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-image {
+  max-width: 50%;
+}
+
+.card-content p {
+  text-align: left;
+  font-size: 0.9rem;
+}

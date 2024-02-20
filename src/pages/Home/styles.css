@@ -1,0 +1,6 @@
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 4rem 0;
+}

@@ -1,0 +1,22 @@
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  background-color: transparent;
+  border: 3px solid var(--purple-950);
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.button-container img {
+  max-width: 1.2rem;
+}
+
+.button-container:hover {
+  background-color: var(--purple-250);
+  border: 3px solid transparent;
+}
