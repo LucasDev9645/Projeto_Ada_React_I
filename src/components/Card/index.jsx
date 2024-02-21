@@ -5,11 +5,9 @@ import strengthIcon from "../../assets/Icons/strength_button.png";
 import trashIcon from "../../assets/Icons/trash_button.png";
 import { Link } from "react-router-dom";
 
-import { heroisList } from "../../util/herois";
-
 function Card({ props, onDelete }) {
   function handleDeleteClick() {
-    onDelete(props.id);
+    onDelete(props.nome);
   }
 
   return (
@@ -26,7 +24,7 @@ function Card({ props, onDelete }) {
       </div>
 
       <Button>
-        <Link to={`/person/${props.id}`}>
+        <Link to={`/person/${props.nome}`}>
           <img src={strengthIcon} alt="Icone de detalhes personagem" />
           Ver Detalhes
         </Link>

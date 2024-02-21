@@ -3,9 +3,8 @@ import "./styles.css";
 import { useParams } from "react-router-dom";
 
 function PersonDetail({ props }) {
-  const { id } = useParams();
-  const personagem = props.find((p) => p.id === Number(id));
-
+  const { name } = useParams();
+  const personagem = props.find((p) => p.nome === name);
   return (
     <div className="person-detail-container">
       <div>

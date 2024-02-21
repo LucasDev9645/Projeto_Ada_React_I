@@ -1,12 +1,13 @@
 import { useState } from "react";
 
-import { Input, Select, TextArea } from "../../components/Input";
+import { Input, Select, TextArea } from "../Input";
 
 import addUserButton from "../../assets/Icons/add_user_button.png";
 import addInput from "../../assets/Icons/add_input.svg";
 
 import "./styles.css";
 
+// eslint-disable-next-line react/prop-types
 function NewPerson({ onAddPersonagem }) {
   const [avatarUrl, setAvatarUrl] = useState("");
   const [imageAvatar, setImageAvatar] = useState(null);
@@ -36,10 +37,9 @@ function NewPerson({ onAddPersonagem }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    let urlImagem = "/src/assets/img-heroi/" + imageAvatar.name;
 
     const novoPersonagem = {
-      id: Date.now(), // Pode usar uma lógica melhor para gerar IDs únicos
-      avatarUrl,
       nome,
       altura,
       idade,
@@ -47,14 +47,21 @@ function NewPerson({ onAddPersonagem }) {
       raca,
       tipo,
       descricao,
+      urlImagem,
     };
-
     onAddPersonagem(novoPersonagem);
-  }
 
+    setNome("");
+    setDescricao("");
+    setOrigem("");
+    setTipo("");
+    setAltura("");
+    setAvatarUrl("");
+    setIdade("");
+    setRaca("");
+  }
   return (
     <div>
-      {/* <h1 className="title">Novo Personagem</h1> */}
       <form className="form-style" onSubmit={handleSubmit}>
         <div>
           <label className="labelAvatar">
@@ -82,26 +89,31 @@ function NewPerson({ onAddPersonagem }) {
             placeholder="Nome do Personagem"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
+            required
           />
           <Input
             placeholder="Altura"
             value={altura}
             onChange={(e) => setAltura(e.target.value)}
+            required
           />
           <Input
             placeholder="Idade"
             value={idade}
             onChange={(e) => setIdade(e.target.value)}
+            required
           />
           <Input
             placeholder="Origem"
             value={origem}
             onChange={(e) => setOrigem(e.target.value)}
+            required
           />
           <Input
             placeholder="Raça"
             value={raca}
             onChange={(e) => setRaca(e.target.value)}
+            required
           />
           <Select
             placeholder="Selecione o Tipo"
@@ -112,6 +124,7 @@ function NewPerson({ onAddPersonagem }) {
             placeholder="Descrição..."
             value={descricao}
             onChange={(e) => setDescricao(e.target.value)}
+            required
           />
           <button type="submit" className="button-style ">
             <img src={addUserButton} alt="" />

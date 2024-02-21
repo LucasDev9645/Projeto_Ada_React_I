@@ -1,18 +1,19 @@
 import { useState } from "react";
-import Card from "../../components/Card";
 
 import SearchBar from "../../components/SearchBar";
+import NewPerson from "../../components/NewPerson";
+import Card from "../../components/Card";
+
 import { heroisList } from "../../util/herois";
 
 import "./styles.css";
-import NewPerson from "../NewPerson";
 
 function Home() {
   const [herois, setHerois] = useState(heroisList);
   const [filteredHerois, setFilteredHerois] = useState(heroisList);
 
-  const handleDeleteHeroi = (id) => {
-    const updatedHerois = herois.filter((heroi) => heroi.id !== id);
+  const handleDeleteHeroi = (nome) => {
+    const updatedHerois = herois.filter((heroi) => heroi.nome !== nome);
     setHerois(updatedHerois);
     setFilteredHerois(updatedHerois);
   };

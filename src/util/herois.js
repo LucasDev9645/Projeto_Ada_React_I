@@ -9,7 +9,6 @@ import coringa from "../assets/img-heroi/f80dcd552e56304b651ccaaf18af99a7.png";
 
 export const heroisList = [
   {
-    id: 1,
     nome: "Homem-Aranha",
     altura: "1.78m",
     idade: 25,
@@ -21,7 +20,6 @@ export const heroisList = [
     urlImagem: spiderMan,
   },
   {
-    id: 2,
     nome: "Superman",
     altura: "1.95m",
     idade: 35,
@@ -30,10 +28,9 @@ export const heroisList = [
     tipo: "Herói",
     descricao:
       "Clark Kent, também conhecido como Superman, é um herói indestrutível com superforça, voo e visão de calor. Ele protege a Terra de ameaças extraterrestres e desastres naturais.",
-    urlImagem: superMan,
+    urlImagem: "/src/assets/img-heroi/thanos-vilao.png",
   },
   {
-    id: 3,
     nome: "Mulher Maravilha",
     altura: "1.75m",
     idade: 28,
@@ -45,7 +42,6 @@ export const heroisList = [
     urlImagem: mulherMaravilha,
   },
   {
-    id: 4,
     nome: "Huck",
     altura: "1.80m",
     idade: 30,
@@ -57,7 +53,6 @@ export const heroisList = [
     urlImagem: huck,
   },
   {
-    id: 5,
     nome: "Coringa",
     altura: "1.75m",
     idade: 32,
@@ -69,7 +64,6 @@ export const heroisList = [
     urlImagem: coringa,
   },
   {
-    id: 6,
     nome: "Hela",
     altura: "1.82m",
     idade: 1000,

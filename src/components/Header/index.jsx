@@ -25,14 +25,6 @@ function Header() {
               Início
             </Link>
           </li>
-          <li>
-            <Link
-              to="/new-person"
-              aria-label="Ir para a página Novo Personagem"
-            >
-              Novo Personagem
-            </Link>
-          </li>
         </ul>
       </nav>
     </header>
