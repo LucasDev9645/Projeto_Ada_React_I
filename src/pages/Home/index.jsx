@@ -26,8 +26,11 @@ function Home() {
   };
 
   const handleAddPersonagem = (novoPersonagem) => {
-    setHerois([...herois, novoPersonagem]);
-    setFilteredHerois([...herois, novoPersonagem]);
+    setHerois((prevHerois) => [novoPersonagem, ...prevHerois]);
+    setFilteredHerois((prevFilteredHerois) => [
+      novoPersonagem,
+      ...prevFilteredHerois,
+    ]);
   };
 
   return (

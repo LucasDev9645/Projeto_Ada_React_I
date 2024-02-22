@@ -12,9 +12,9 @@ export function TextArea({ ...rest }) {
 export function Select({ placeholder, ...rest }) {
   return (
     <select className="select-style " placeholder={placeholder} {...rest}>
-      <option value="">Selecione um Tipo</option>
-      <option value="">Heroi</option>
-      <option value="">Vilão</option>
+      <option value="selecione um tipo">Selecione um Tipo</option>
+      <option value="heroi">Heroi</option>
+      <option value="vilao">Vilão</option>
     </select>
   );
 }

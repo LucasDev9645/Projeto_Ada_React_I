@@ -6,6 +6,17 @@ import trashIcon from "../../assets/Icons/trash_button.png";
 import { Link } from "react-router-dom";
 
 function Card({ props, onDelete }) {
+  const queryParams = new URLSearchParams({
+    nome: props.nome,
+    altura: props.altura,
+    idade: props.idade,
+    origem: props.origem,
+    raca: props.raca,
+    tipo: props.tipo,
+    descricao: props.descricao,
+    urlImagem: props.urlImagem,
+  }).toString();
+
   function handleDeleteClick() {
     onDelete(props.nome);
   }
@@ -24,7 +35,7 @@ function Card({ props, onDelete }) {
       </div>
 
       <Button>
-        <Link to={`/person/${props.nome}`}>
+        <Link to={`/person/${props.nome}?${queryParams}`}>
           <img src={strengthIcon} alt="Icone de detalhes personagem" />
           Ver Detalhes
         </Link>

@@ -9,6 +9,7 @@ import "./styles.css";
 
 // eslint-disable-next-line react/prop-types
 function NewPerson({ onAddPersonagem }) {
+  const [selectedTipo, setSelectedTipo] = useState("");
   const [avatarUrl, setAvatarUrl] = useState("");
   const [imageAvatar, setImageAvatar] = useState(null);
   const [nome, setNome] = useState("");
@@ -16,7 +17,6 @@ function NewPerson({ onAddPersonagem }) {
   const [idade, setIdade] = useState("");
   const [origem, setOrigem] = useState("");
   const [raca, setRaca] = useState("");
-  const [tipo, setTipo] = useState("");
   const [descricao, setDescricao] = useState("");
 
   function handleFile(e) {
@@ -35,6 +35,10 @@ function NewPerson({ onAddPersonagem }) {
     }
   }
 
+  function handleChangeCategory(e) {
+    setSelectedTipo(e.target.value);
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     let urlImagem = "/src/assets/img-heroi/" + imageAvatar.name;
@@ -45,21 +49,21 @@ function NewPerson({ onAddPersonagem }) {
       idade,
       origem,
       raca,
-      tipo,
+      tipo: selectedTipo,
       descricao,
       urlImagem,
     };
     onAddPersonagem(novoPersonagem);
-
     setNome("");
     setDescricao("");
     setOrigem("");
-    setTipo("");
+    setSelectedTipo("");
     setAltura("");
     setAvatarUrl("");
     setIdade("");
     setRaca("");
   }
+
   return (
     <div>
       <form className="form-style" onSubmit={handleSubmit}>
@@ -116,9 +120,9 @@ function NewPerson({ onAddPersonagem }) {
             required
           />
           <Select
+            value={selectedTipo}
+            onChange={handleChangeCategory}
             placeholder="Selecione o Tipo"
-            value={tipo}
-            onChange={(e) => setTipo(e.target.value)}
           />
           <TextArea
             placeholder="Descrição..."
